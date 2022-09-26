@@ -8,7 +8,7 @@ console.log(tiles);
 
 
 tiles.forEach(tile => {
-    let image = tile.children[0];
+
     let description = tile.children[1];
     description.style.visibility = 'hidden';
 
