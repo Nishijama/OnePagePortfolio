@@ -46,23 +46,14 @@ canvas.addEventListener('mousemove', (e) => {
     mouse.y = e.y
 })
 
-// function drawWhisp(x, y, r) {
-//     ctx.beginPath();
-//     const gradient = ctx.createRadialGradient(x, y, 0.01 , x, y, r);
-//     ctx.fillStyle = gradient;
-//     ctx.arc(x, y, r, 0, Math.PI*2);
-//     gradient.addColorStop(0.1, "#05D8E8");
-//     gradient.addColorStop(1, "rgb(13,13,13,0)");
-//     ctx.fill();
-// }
 
 class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.r = Math.random() * 11 + 1;
-        this.speedX = Math.random() * 3 -1
-        this.speedY = Math.random() * 3 -1
+        this.speedX = (Math.random() * 3 -1)/5
+        this.speedY = (Math.random() * 3 -1)/5
     }
     update() {
         if (this.x >= canvas.width || this.x <= 0) {
@@ -71,9 +62,12 @@ class Particle {
         if (this.y >= canvas.height || this.y <= 0) {
             this.speedY *= -1;
         }
-    
         this.x += this.speedX
         this.y += this.speedY
+
+        if (this.r > 0.2) {
+            this.r -= 0.1;
+        }
     }
     draw() {
         let x = this.x;
@@ -89,20 +83,25 @@ class Particle {
     }
 }
 
-function init() {
-    for (let i = 0; i < 15; i++) {
+function init(n) {
+    for (let i = 0; i < n; i++) {
         particlesArray.push(new Particle())      ;
     }
 }
 
 function handleParticles() {
-    particlesArray.forEach(particle => {
-        particle.update();
-        particle.draw();        
-    });
+
+    for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+        particlesArray[i].draw();
+        if(particlesArray[i].r < 0.2) {
+            particlesArray.splice(i,1);
+            particlesArray.push(new Particle());
+        }
+    }
 }
 
-init();
+init(15);
 console.log(particlesArray);
 
 function animate() {

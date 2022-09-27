@@ -103,7 +103,7 @@ p {
     height: 100vh;
     top:0;
     left: 0;
-    /* z-index: -1; */
+    z-index: -1;
     margin: 0;
     padding: 0;
 }
@@ -121,7 +121,7 @@ p {
 
 #header-text{
     align-self: center;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 #header-text h1 {
@@ -145,7 +145,7 @@ p {
 }
 
 #avatar {
-    z-index: 1;
+    /* z-index: 1; */
     align-self: center;
     height: 33vh;
     width: auto;
