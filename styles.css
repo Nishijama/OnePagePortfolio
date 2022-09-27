@@ -96,9 +96,21 @@ p {
     font-size: 1.5vh;
 }
 
+#canvas1 {
+    position: absolute;
+    background: #0D0D0D;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    /* z-index: -1; */
+    margin: 0;
+    padding: 0;
+}
+
 #header-section {
     box-sizing: border-box; padding: 10vh 15vw; margin: 0; 
-    background-color: #0D0D0D;
+    /* background-color: #0D0D0D; */
     color: white;
     width: 100vw; height: 100vh;
     box-sizing: border-box;
@@ -109,6 +121,7 @@ p {
 
 #header-text{
     align-self: center;
+    z-index: 1;
 }
 
 #header-text h1 {
@@ -132,6 +145,7 @@ p {
 }
 
 #avatar {
+    z-index: 1;
     align-self: center;
     height: 33vh;
     width: auto;
