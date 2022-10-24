@@ -154,3 +154,13 @@ function toggleHeader() {
     document.querySelector("#avatar").classList.toggle("hidden")
     document.querySelector("#header-text").classList.toggle("hidden")
 }
+
+function toggleResume() {
+    let educationToggle = document.getElementById("education-header");
+    let careerToggle = document.getElementById("career-header");
+    let skillsToggle = document.getElementById("skills-header");
+
+    educationToggle.onclick = () => {
+        
+    }
+}
