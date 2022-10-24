@@ -1,5 +1,10 @@
 console.log("hello there!");
 
+let btn = document.getElementById("myBtn")
+
+aboutBtn.addEventListener('click', () => handleModals("about"));
+resumeBtn.addEventListener('click', () => handleModals("resume"));
+
 let images = document.querySelectorAll('.img-miniature')
 let snippets = document.querySelectorAll('.project-description')
 let tiles = document.querySelectorAll('.tile')
@@ -111,3 +116,41 @@ function animate() {
     requestAnimationFrame(animate);
 }
 animate();
+
+
+
+
+
+
+function handleModals(modalID) {
+
+    let modal = document.getElementById(modalID + "-modal");
+    // let close = document.getElementsByClassName("close")[0];
+    let close = document.getElementById(modalID + "-close");
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    window.scrollTo(0,0)
+    modal.style.display = "block";
+    toggleHeader();
+
+    close.onclick = function() {
+        document.getElementsByTagName('body')[0].style.overflow = 'visible'
+        modal.style.display = "none";
+        toggleHeader();
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        document.getElementsByTagName('body')[0].style.overflow = 'visible'
+        modal.style.display = "none";
+        toggleHeader();
+    }
+    }
+}
+
+
+function toggleHeader() {
+    document.querySelector("#go-to-projects-arrow").classList.toggle("hidden")
+    document.querySelector("#avatar").classList.toggle("hidden")
+    document.querySelector("#header-text").classList.toggle("hidden")
+}

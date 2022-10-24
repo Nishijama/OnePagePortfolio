@@ -1,3 +1,8 @@
+:root {
+    --highlight: #05D8E8;
+    --dark: #0D0D0D;
+  }
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,26 +16,28 @@ body {
 }
 
 button {
-    background-color:#0D0D0D;
+    padding:10px;
+    font-size: 1.5vh;
+    color: white;
+    box-shadow: none;
+}
+
+.project-links-section button {
+    background-color: var(--dark);
     border: 1px solid white;
     border-radius: 5px;
-    box-shadow: none;
-    color: white;
-    font-size: 1.5vh;
-    width: fit-content;
-    padding: 10px;
     margin: 20px;
 }
 
-button:hover {
-    border: 1px solid #05D8E8;
+.project-links-section button:hover {
+    border: 1px solid var(--highlight);
     cursor: pointer;
-    color: #05D8E8;
+    color: var(--highlight);
 }
 
 
 footer {
-    background-color: #05BFCD;
+    background-color: var(--highlight);
     text-align: center;
 }
 
@@ -46,7 +53,7 @@ footer i.fa-angle-up {
 }
 
 footer i.fa-angle-up:hover {
-    color: #0D0D0D;
+    color: var(--dark);
     cursor: pointer;
 }
 
@@ -98,7 +105,7 @@ p {
 
 #canvas1 {
     position: absolute;
-    background: #0D0D0D;
+    background: var(--dark);
     width: 100vw;
     height: 100vh;
     top:0;
@@ -110,7 +117,6 @@ p {
 
 #header-section {
     box-sizing: border-box; padding: 10vh 15vw; margin: 0; 
-    /* background-color: #0D0D0D; */
     color: white;
     width: 100vw; height: 100vh;
     box-sizing: border-box;
@@ -130,7 +136,9 @@ p {
 }
 
 #header-text a, #header-text p{
-    color: #05D8E8; text-decoration: none; font-size: 2vh;
+    color: var(--highlight); 
+    text-decoration: none; 
+    font-size: 2vh;
 }
 
 #header-text i {
@@ -140,7 +148,7 @@ p {
 }
 
 #header-section i:hover {
-    color: #05BFCD;
+    color: var(--highlight);
     cursor: pointer;
 }
 
@@ -172,12 +180,12 @@ p {
 #courses-section{
     box-sizing: border-box; padding: 10vh 15vw; margin: 0; 
     color: white;
-    width: 100vw; background-color:#0D0D0D; 
+    width: 100vw; background-color:var(--dark);
 }
 
 #projects-section h1, #courses-section h1{
     margin: 0;padding-bottom: 10px;     
-    border-bottom: 2px solid #05D8E8;
+    border-bottom: 2px solid var(--highlight);
     color: white;
 }
 
@@ -192,7 +200,7 @@ p {
 
 .tile {
     border: 1px solid white;
-    box-shadow: 5px 10px 10px #0D0D0D;
+    box-shadow: 5px 10px 10px var(--dark);
     width: 45%;
     height: 20vmax;
     padding: 0px;
@@ -220,7 +228,7 @@ p {
 }
 
 .text-highlight {
-    color:#05D8E8;
+    color:var(--highlight);
 }
 
 .img-miniature {
@@ -237,7 +245,7 @@ p {
 }
 
 #tech-stack-section {
-    background-color: #05BFCD;
+    background-color: var(--highlight);
     height: 15vh;
     display: flex;
     flex-direction: column;
@@ -253,7 +261,6 @@ p {
 
 @media only screen and (max-width: 992px) {
     #header-section {
-      /* background-color: lightblue; */
       flex-direction: column;
       justify-content: space-between;
     }
@@ -270,4 +277,83 @@ p {
         margin: 10px auto;
 
     }
+  }
+
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--dark); /* Fallback color */
+    background-color: rgba(13,13,13,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: rgba(13,13,13,0.1);
+    margin: 10vh auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 1vmax;
+    width: 80vw; /* Could be more or less, depending on screen size */
+    height: 80vh;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .modal-header-div {
+    padding: 10vh;
+    max-width: fit-content;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .modal-header {
+    font-size: 4min;
+    cursor: pointer;
+  }
+  .modal-header:hover {
+    color: var(--highlight)
+  }
+
+  .download-btn {
+    margin:0;
+    background-color: var(--highlight);
+    color: white;
+    font-weight: bold;
+    border:none;
+    border-radius: 0;
+  }
+
+  .download-btn a:hover {
+    color: var(--dark);
+  }
+
+  .download-btn span {
+    vertical-align:bottom;
   }

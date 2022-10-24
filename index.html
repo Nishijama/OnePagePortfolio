@@ -8,15 +8,91 @@
     <meta property='og:description' content='Personal Programing Portfolio'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip Plociennik Programing Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <section id="header-section">
         <canvas id="canvas1"></canvas>
+
+    <!-- The Resume Modal -->
+    <div id="resume-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="resume-close" class="close">&times;</span>
+            <div class="modal-header-div">
+                <h3 class="modal-header">EDUCATION</h3>
+                <div id="education-text">
+                    <table>
+                        <tr>
+                            <td>2014-17</td>
+                            <td><strong>Adam Mickiewicz University</strong><br>Faculty of English, Translation</td>
+                        </tr>
+                    </table>
+                </div>
+                <h3 class="modal-header">CAREER</h3>
+                <div id="career-text">
+                    <table>
+                        <tr><td>2021-</td><td><strong>Junior Communications Analyst</strong><br>McKinsey & Company</td></tr>
+                        <tr><td>2019-21</td><td><strong>Workflow planner</strong><br>McKinsey & Company</td></tr>
+                        <tr><td>2017-19</td><td><strong>Visual Graphics Specialist </strong><br>McKinsey & Company</td></tr>
+                    </table>
+                </div>
+                <h3 class="modal-header">SKILLS</h3>
+                <table>
+                    <tr><td><strong>General</strong></td><td><ul>
+                        <li>Data management</li>
+                        <li>Web Development</li>
+                        <li>Algorithms and data structures</li>
+                        <li>Object-Oriented Programming</li>
+                    </ul></td></tr>
+                    <tr><td><strong>Tech</strong></td><td><ul>
+                        <li>Python for data analysis (Numpy, Pandas, Seaborn) and web development (Django, Flask)</li>
+                        <li>JavaScript (ES6), NodeJS, ReactJS</li>
+                        <li>HTML, CSS, Bootstrap</li>
+                        <li>Relational Databases (MySQL, SQLite)</li>
+                        <li>Linux command line, GIT version control</li>
+                    </ul></td></tr>
+
+                    <tr><td><strong>Soft</strong></td><td><ul>
+                        <li>Fluent English (C1)</li>
+                        <li>Experience with corporate communication</li>
+                        <li>Problem solving</li>
+                        <li>Can-do attitude</li>
+                        <li>Teamwork</li>
+                    </ul></td></tr>
+                </table>
+                <div id="skills-text">
+
+                </div>
+                <button class="download-btn">
+                    <a download="filip_plociennik_cv.pdf" href="FILIP_CV.pdf">DOWNLOAD PDF <span class="material-symbols-outlined">file_download</span></a>
+                </button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+        
+        <!-- The About Modal -->
+        <div id="about-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="about-close" class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+
+
+
         <div id="header-text">
             <h3>FILIP PLOCIENNIK</h3>
             <h1>Programming<br> portfolio</h1>
-            <p><a href="#">See my resume</a> | <a href="#">Read about me</a></p>
+            <p><a id="resumeBtn">See my resume</a> | <a id="aboutBtn">Read about me</a></p>
             <div id="header-icons">
                 <a href="https://github.com/nishijama" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://linkedin.com/in/filip-plociennik-bb528a216/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -24,7 +100,7 @@
             </div>
         </div>
         <img id='avatar' src="images/avatar.png" alt="">
-        <a id="go-to-projects-arrow"  href="#projects-section"><i class="fa-solid fa-angle-down"></i></a>
+        <a id="go-to-projects-arrow" href="#projects-section"><i class="fa-solid fa-angle-down"></i></a>
         
     </section>
     <section id="projects-section">
@@ -44,6 +120,7 @@
                             <button><a target="_blank" href="https://github.com/Nishijama/OnlineAuctions">See code</a></button>
                             <button>Visit website</button>
                         </div>
+
                 </div>
             </div>
 
@@ -98,10 +175,10 @@
     <section id="tech-stack-section">
         <div id="tech-stack-grid">
             <div class="tech-stack-item">
-                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-square-js"></i>
             </div>
             <div class="tech-stack-item">
-                <i class="fa-brands fa-square-js"></i>
+                <i class="fa-brands fa-react"></i>
             </div>
             <div class="tech-stack-item">
                 <i class="fa-brands fa-html5"></i>
@@ -110,7 +187,10 @@
                 <i class="fa-brands fa-css3-alt"></i>
             </div>
             <div class="tech-stack-item">
-                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="tech-stack-item">
+            <i class="fa-solid fa-database"></i>
             </div>
         </div>
     </section>
