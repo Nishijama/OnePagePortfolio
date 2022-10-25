@@ -246,7 +246,7 @@ p {
 
 #tech-stack-section {
     background-color: var(--highlight);
-    height: 15vh;
+    height: 15vmin;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -254,8 +254,8 @@ p {
 }
 
 .tech-stack-item i {
-    font-size: 6vh;
-    padding: 15px;
+    font-size: 6vmin;
+    padding: 3vmin;
     color: #0D0D0D;
 }
 
