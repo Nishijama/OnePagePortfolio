@@ -366,3 +366,10 @@ p {
     display:none;
   }
 
+  th {
+    padding-right: 20px;
+    text-align: right;
+  }
+  td {
+    padding: 10px 0;
+  }

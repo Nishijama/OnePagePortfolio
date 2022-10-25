@@ -130,6 +130,7 @@ function handleModals(modalID) {
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
     window.scrollTo(0,0)
     modal.style.display = "block";
+    toggleResume();
     toggleHeader();
 
     close.onclick = function() {
@@ -160,7 +161,27 @@ function toggleResume() {
     let careerToggle = document.getElementById("career-header");
     let skillsToggle = document.getElementById("skills-header");
 
+    const components = document.querySelectorAll(".resume-component")
+
     educationToggle.onclick = () => {
-        
+        for (component of components) {
+            component.classList.add("notDisplayed")
+        }
+        document.querySelector("#education-text").classList.toggle("notDisplayed")
     }
+
+    careerToggle.onclick = () => {
+        for (component of components) {
+            component.classList.add("notDisplayed")
+        }
+        document.querySelector("#career-text").classList.toggle("notDisplayed")
+    }
+
+    skillsToggle.onclick = () => {
+        for (component of components) {
+            component.classList.add("notDisplayed")
+        }
+        document.querySelector("#skills-text").classList.toggle("notDisplayed")
+    }
+
 }
