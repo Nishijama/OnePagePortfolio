@@ -302,7 +302,7 @@ p {
     border: 1px solid #888;
     border-radius: 1vmax;
     width: 80vw; /* Could be more or less, depending on screen size */
-    height: fit-content;
+    /* height: fit-content; */
   }
   
   /* The Close Button */
@@ -327,8 +327,8 @@ p {
   .modal-header-div {
     padding: 10vh;
     max-width: fit-content;
-    height: 50vh;
-    display: flex;
+    min-height: 50vh;
+    display: flex; 
     flex-direction: column;
     justify-content: space-around;
   }
@@ -355,7 +355,7 @@ p {
   }
 
   .download-btn span {
-    vertical-align:bottom;
+    vertical-align:middle;
   }
 
   #resumeBtn,#aboutBtn{

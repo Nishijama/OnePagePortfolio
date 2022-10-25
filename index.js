@@ -165,21 +165,21 @@ function toggleResume() {
 
     educationToggle.onclick = () => {
         for (component of components) {
-            component.classList.add("notDisplayed")
+            if(component.id !== "education-text") component.classList.add("notDisplayed")
         }
         document.querySelector("#education-text").classList.toggle("notDisplayed")
     }
 
     careerToggle.onclick = () => {
         for (component of components) {
-            component.classList.add("notDisplayed")
+            if(component.id !== "career-text") component.classList.add("notDisplayed")
         }
         document.querySelector("#career-text").classList.toggle("notDisplayed")
     }
 
     skillsToggle.onclick = () => {
         for (component of components) {
-            component.classList.add("notDisplayed")
+            if(component.id !== "skills-text") component.classList.add("notDisplayed")
         }
         document.querySelector("#skills-text").classList.toggle("notDisplayed")
     }
