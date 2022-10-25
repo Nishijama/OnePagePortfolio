@@ -1,0 +1,21 @@
+       
+                    General
+                        Data management
+                        Web Development
+                        Algorithms and data structures
+                        Object-Oriented Programming
+                    
+                    Tech
+                        Python for data analysis (Numpy, Pandas, Seaborn) and web development (Django, Flask)
+                        JavaScript (ES6), NodeJS, ReactJS
+                        HTML, CSS, Bootstrap
+                        Relational Databases (MySQL, SQLite)
+                        Linux command line, GIT version control
+                    
+
+                    Soft
+                        Fluent English (C1)
+                        Experience with corporate communication
+                        Problem solving
+                        Can-do attitude
+                        Teamwork

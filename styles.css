@@ -5,6 +5,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: white;
 }
 
 body {
@@ -21,6 +22,7 @@ button {
     color: white;
     box-shadow: none;
 }
+
 
 .project-links-section button {
     background-color: var(--dark);
@@ -287,6 +289,8 @@ p {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
+    margin:0;
+    padding:0;
     width: 100vw; /* Full width */
     height: 100vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
@@ -296,19 +300,24 @@ p {
   
   /* Modal Content/Box */
   .modal-content {
+    text-align: center;
     background-color: rgba(13,13,13,0.1);
     margin: 10vh auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    /* border: 1px solid #888; */
     border-radius: 1vmax;
+    height: 80vh;
     width: 80vw; /* Could be more or less, depending on screen size */
-    /* height: fit-content; */
+    display: flex;
+    flex-direction: column;
+    
   }
   
   /* The Close Button */
   .close {
     color: #aaa;
     float: right;
+    align-self: flex-end;
     font-size: 28px;
     font-weight: bold;
   }
@@ -324,31 +333,25 @@ p {
     visibility: hidden;
   }
 
-  .modal-header-div {
-    padding: 10vh;
-    max-width: fit-content;
-    min-height: 50vh;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-around;
-  }
 
   .modal-header {
     font-size: 4min;
     cursor: pointer;
+    text-align: center;
   }
   .modal-header:hover {
     color: var(--highlight)
   }
 
   .download-btn {
-    margin:0;
+
+    align-self: center;
+    margin:auto;
     background-color: var(--highlight);
     color: white;
     font-weight: bold;
     border:none;
     border-radius: 0;
-    margin: 0 10vh;
   }
 
   .download-btn a:hover {
@@ -367,10 +370,3 @@ p {
     display:none;
   }
 
-  th {
-    padding-right: 20px;
-    text-align: right;
-  }
-  td {
-    padding: 10px 0;
-  }

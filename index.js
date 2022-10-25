@@ -3,7 +3,6 @@ console.log("hello there!");
 let btn = document.getElementById("myBtn")
 
 aboutBtn.addEventListener('click', () => handleModals("about"));
-resumeBtn.addEventListener('click', () => handleModals("resume"));
 
 let images = document.querySelectorAll('.img-miniature')
 let snippets = document.querySelectorAll('.project-description')
@@ -130,7 +129,6 @@ function handleModals(modalID) {
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
     window.scrollTo(0,0)
     modal.style.display = "block";
-    toggleResume();
     toggleHeader();
 
     close.onclick = function() {
@@ -156,32 +154,3 @@ function toggleHeader() {
     document.querySelector("#header-text").classList.toggle("hidden")
 }
 
-function toggleResume() {
-    let educationToggle = document.getElementById("education-header");
-    let careerToggle = document.getElementById("career-header");
-    let skillsToggle = document.getElementById("skills-header");
-
-    const components = document.querySelectorAll(".resume-component")
-
-    educationToggle.onclick = () => {
-        for (component of components) {
-            if(component.id !== "education-text") component.classList.add("notDisplayed")
-        }
-        document.querySelector("#education-text").classList.toggle("notDisplayed")
-    }
-
-    careerToggle.onclick = () => {
-        for (component of components) {
-            if(component.id !== "career-text") component.classList.add("notDisplayed")
-        }
-        document.querySelector("#career-text").classList.toggle("notDisplayed")
-    }
-
-    skillsToggle.onclick = () => {
-        for (component of components) {
-            if(component.id !== "skills-text") component.classList.add("notDisplayed")
-        }
-        document.querySelector("#skills-text").classList.toggle("notDisplayed")
-    }
-
-}
