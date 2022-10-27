@@ -97,7 +97,7 @@ h3 {
 }
 
 h4 {
-    font-size: 2vh;
+    font-size: 2.5vh;
 
     padding: 0;
     margin: 0;
@@ -236,6 +236,9 @@ p {
     opacity: 1;
 }
 
+.project-description > .description-box > p {
+    font-size: 2vh;
+}
 
 .text-highlight {
     color:var(--highlight);
@@ -269,26 +272,6 @@ p {
     color: #0D0D0D;
 }
 
-@media only screen and (max-width: 992px) {
-    #header-section {
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .tile {
-        width: 100%;
-        flex-direction: column;
-
-    }
-    .tile {
-        height: 30vh;
-    }
-    #go-to-projects-arrow {
-        position: static;
-        margin: 10px auto;
-
-    }
-  }
-
 
   /* The Modal (background) */
 .modal {
@@ -312,10 +295,9 @@ p {
     background-color: rgba(13,13,13,0.1);
     margin: 10vh auto; /* 15% from the top and centered */
     padding: 20px;
-    /* border: 1px solid #888; */
     border-radius: 1vmax;
-    height: 80vh;
-    width: 80vw; /* Could be more or less, depending on screen size */
+    height: 90vh;
+    width: 90vw; /* Could be more or less, depending on screen size */
     display: flex;
     flex-direction: column;
     
@@ -323,7 +305,7 @@ p {
   
   /* The Close Button */
   .close {
-    color: #aaa;
+    color: white;
     float: right;
     align-self: flex-end;
     font-size: 28px;
@@ -342,14 +324,17 @@ p {
   }
 
   .download-btn {
-
+    padding:10px;
+    font-size: 1.5vh;
+    color: white;
+    box-shadow: none;
     align-self: center;
-    margin:auto;
+    margin:5vh;
     background-color: var(--highlight);
     color: var(--dark);
     font-weight: bold;
     border:none;
-    font-size: 2vmin;
+    font-size: 2vh;
     border-radius: 0;
     transition: 0.2s;
   }
@@ -372,6 +357,30 @@ p {
   }
 
   .about-item > p {
-    font-size: 2vmin;
+    font-size: 2vh;
   }
 
+
+  @media only screen and (max-width: 992px) {
+    #header-section {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tile {
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .tile {
+        height: 30vh;
+    }
+    #go-to-projects-arrow {
+        position: static;
+        margin: 10px auto;
+
+    }
+    .modal-content {
+        margin: 0;
+    }
+
+  }
