@@ -11,21 +11,6 @@ let tiles = document.querySelectorAll('.tile')
 console.log(tiles);
 
 
-tiles.forEach(tile => {
-
-    let description = tile.children[1];
-    description.style.visibility = 'hidden';
-
-    tile.addEventListener('mouseover', () => {
-        description.style.visibility = 'visible';
-    });
-    
-
-    tile.addEventListener('mouseout', () => {
-        description.style.visibility = 'hidden';
-    })
-})
-
 // CANVAS
 
 const canvas = document.getElementById('canvas1')
@@ -118,14 +103,14 @@ animate();
 
 
 
-
+// MODAL
 
 
 function handleModals(modalID) {
 
     let modal = document.getElementById(modalID + "-modal");
-    // let close = document.getElementsByClassName("close")[0];
     let close = document.getElementById(modalID + "-close");
+    
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
     window.scrollTo(0,0)
     modal.style.display = "block";
