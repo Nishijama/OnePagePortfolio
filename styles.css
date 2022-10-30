@@ -48,7 +48,8 @@ footer p, footer i {
     margin: 0;
     padding: 30px 10px;
     color: white;
-    font-size: 2vh;
+    font-size: 1.5vh;
+    font-style: italic;
 }
 
 footer i.fa-angle-up {
