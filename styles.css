@@ -120,6 +120,16 @@ p {
     padding: 0;
 }
 
+#header-icons {
+    display: inline;
+    vertical-align: bottom;
+}
+
+#header-icons > a > i {
+display: inline;
+vertical-align: bottom;
+}
+
 #header-section {
     box-sizing: border-box; padding: 10vh 15vw; margin: 0; 
     color: white;
@@ -199,7 +209,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     display: flex;
-    margin: 100px 0;
+    margin: 10vmin 0;
 }
 
 
