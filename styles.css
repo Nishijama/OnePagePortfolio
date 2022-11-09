@@ -126,7 +126,7 @@ p {
 }
 
 #header-icons {
-    display: inline;
+    display: flex;
     vertical-align: bottom;
 }
 
