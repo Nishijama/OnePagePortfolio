@@ -3,6 +3,10 @@
     --dark: #0D0D0D;
   }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     background-color: white;
@@ -18,27 +22,24 @@ body {
 }
 
 button {
-    padding:10px;
-    font-size: 1.5vh;
-    color: white;
+    align-self: center;
     box-shadow: none;
-}
-
-
-.project-links-section button {
-    background-color: var(--dark);
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 20px;
-}
-
-.project-links-section button:hover {
     border: 1px solid var(--highlight);
-    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--dark);
     color: var(--highlight);
+    font-size: 1.5vh;
+    font-weight: bold;
+    margin:5vh;
+    padding:1vmin;
+    transition: 0.5s;
 }
 
-
+button:hover {
+    color: white;
+    background-color: var(--highlight);
+    cursor: pointer;
+}
 footer {
     background-color: var(--highlight);
     text-align: center;
@@ -233,7 +234,6 @@ vertical-align: bottom;
 
 
 .project-description {
-    box-sizing: border-box;
     background-color:rgb(13, 13, 13, 0.95) ;
     color: white;
     width:100%;
@@ -248,11 +248,21 @@ vertical-align: bottom;
     justify-content: center;
     opacity: 0;
     transition: 0.3s;
+    text-align: center;
 }
 
 
+.project-description > .description-box > h4 {
+    font-size: 2vmin;
+}
+
 .project-description > .description-box > p {
-    font-size: 2vh;
+    font-size: 1.5vmin;
+}
+
+.project-links-section > a > button {
+    border-radius: 0;
+    width: fit-content;
 }
 
 .text-highlight {
@@ -270,6 +280,7 @@ vertical-align: bottom;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-around;
+    height: 100px;
 }
 
 #tech-stack-section {
@@ -339,20 +350,17 @@ vertical-align: bottom;
   }
 
   .download-btn {
-    padding:2vmin;
-    font-size: 1.5vh;
-    color: white;
-    box-shadow: none;
-    align-self: center;
-    margin:5vh;
-    background-color: var(--dark);
-    color: var(--highlight);
-    font-weight: bold;
-    border: 1px solid var(--highlight);
-    font-size: 2vh;
-    border-radius: 0;
-    transition: 0.2s;
-    border-radius: 10vmin;
+      align-self: center;
+      box-shadow: none;
+      border: 1px solid var(--highlight);
+      border-radius: 10vmin;
+      background-color: var(--dark);
+      color: var(--highlight);
+      font-size: 2vh;
+      font-weight: bold;
+      margin:5vh;
+      padding:2vmin;
+      transition: 0.5s;
   }
 
   .download-btn:hover {
