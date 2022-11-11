@@ -10,6 +10,7 @@
 html {
     scroll-behavior: smooth;
     background-color: white;
+    font-size: 2vh;
 }
 
 body {
@@ -28,10 +29,9 @@ button {
     border-radius: 20px;
     background-color: var(--dark);
     color: var(--highlight);
-    font-size: 1.5vh;
+    font-size: 1rem;
     font-weight: bold;
-    margin:5vh;
-    padding:1vmin;
+    padding: 1vmin 2vmin;
     transition: 0.5s;
 }
 
@@ -51,15 +51,12 @@ small {
 }
 
 footer p, footer i {
-    margin: 0;
     padding: 30px 10px;
     color: white;
-    font-size: 1.5vh;
-    font-style: italic;
 }
 
 footer i.fa-angle-up {
-    font-size: 5vh;
+    font-size: 2.5rem;
 }
 
 footer i.fa-angle-up:hover {
@@ -77,13 +74,13 @@ footer #logo-grid {
 h1 {
     color: white;
     font-size: xx-large;
-    font-size: 6vh;
+    font-size: 3rem;
 
 }
 h2 {
     text-align: center;
     color: white;
-    font-size: 4vh;
+    font-size: 2rem;
     font-weight: normal;
 }
 
@@ -96,7 +93,7 @@ a:hover {
 }
 
 h3 {
-    font-size: 2.5vh;
+    font-size: 1.5rem;
     padding: 0;
     margin: 0;
     font-weight: normal;
@@ -104,14 +101,13 @@ h3 {
 }
 
 h4 {
-    font-size: 2.5vh;
-
+    font-size: 1.2rem;
     padding: 0;
     margin: 0;
 }
 
 p {
-    font-size: 1.5vh;
+    font-size: 1rem;
 }
 
 #canvas1 {
@@ -152,19 +148,18 @@ vertical-align: bottom;
 }
 
 #header-text h1 {
-    font-size: 6vh;
+    font-size: 3rem;
     margin-top: 0;    
 }
 
-#header-text a, #header-text p{
+#header-text a, #header-text p {
     color: var(--highlight); 
     text-decoration: none; 
-    font-size: 2vh;
 }
 
 #header-text i {
     color: white;
-    font-size: 4vh;
+    font-size: 2rem;
     padding-right: 40px;
 }
 
@@ -181,7 +176,7 @@ vertical-align: bottom;
 }
 
 #go-to-projects-arrow {
-    font-size: 5vh;
+    font-size: 2.5rem;
     position: absolute;
     left: 48.5%;
     bottom: 10%;
@@ -248,21 +243,11 @@ vertical-align: bottom;
     justify-content: center;
     opacity: 0;
     transition: 0.3s;
-    text-align: center;
 }
 
+.description-box {
+    width: 100%;
 
-.project-description > .description-box > h4 {
-    font-size: 2vmin;
-}
-
-.project-description > .description-box > p {
-    font-size: 1.5vmin;
-}
-
-.project-links-section > a > button {
-    border-radius: 0;
-    width: fit-content;
 }
 
 .text-highlight {
@@ -276,11 +261,11 @@ vertical-align: bottom;
 }
 
 .project-links-section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    justify-content: space-around;
-    height: 100px;
+    justify-content: space-evenly;
 }
 
 #tech-stack-section {
@@ -293,7 +278,7 @@ vertical-align: bottom;
 }
 
 .tech-stack-item i {
-    font-size: 6vmin;
+    font-size: 7vmin;
     padding: 3vmin;
     color: #0D0D0D;
 }
@@ -321,9 +306,6 @@ vertical-align: bottom;
     background-color: rgba(13,13,13,0.1);
     margin: 10vh auto; /* 15% from the top and centered */
     padding: 20px;
-    border-radius: 1vmax;
-    height: 90vh;
-    width: 90vw; /* Could be more or less, depending on screen size */
     display: flex;
     flex-direction: column;
     
@@ -356,7 +338,7 @@ vertical-align: bottom;
       border-radius: 10vmin;
       background-color: var(--dark);
       color: var(--highlight);
-      font-size: 2vh;
+      font-size: 1rem;
       font-weight: bold;
       margin:5vh;
       padding:2vmin;
@@ -380,11 +362,6 @@ vertical-align: bottom;
  .notDisplayed {
     display:none;
   }
-
-  .about-item > p {
-    font-size: 2vh;
-  }
-
 
   @media only screen and (max-width: 992px) {
 
