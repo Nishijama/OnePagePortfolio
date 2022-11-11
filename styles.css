@@ -210,8 +210,8 @@ vertical-align: bottom;
     color: white;
 }
 
-#projects-grid, #courses-grid{
-    box-sizing: border-box;
+
+#courses-grid, #projects-grid{
     flex-wrap: wrap;
     justify-content: space-between;
     display: flex;
@@ -246,12 +246,10 @@ vertical-align: bottom;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
     opacity: 0;
+    transition: 0.3s;
 }
-.project-description:hover {
-    opacity: 1;
-}
+
 
 .project-description > .description-box > p {
     font-size: 2vh;
@@ -341,23 +339,25 @@ vertical-align: bottom;
   }
 
   .download-btn {
-    padding:10px;
+    padding:2vmin;
     font-size: 1.5vh;
     color: white;
     box-shadow: none;
     align-self: center;
     margin:5vh;
-    background-color: var(--highlight);
-    color: var(--dark);
+    background-color: var(--dark);
+    color: var(--highlight);
     font-weight: bold;
-    border:none;
+    border: 1px solid var(--highlight);
     font-size: 2vh;
     border-radius: 0;
     transition: 0.2s;
+    border-radius: 10vmin;
   }
 
   .download-btn:hover {
     color: white;
+    background-color: var(--highlight);
     cursor: pointer;
   }
 
@@ -379,18 +379,27 @@ vertical-align: bottom;
 
 
   @media only screen and (max-width: 992px) {
+
+    #projects-grid, #courses-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 10vmin 0;
+    }
+    
+    #projects-grid > .tile,
+    #courses-grid > .tile {
+        width: 100%;
+        height: auto;
+    }
+
+    
     #header-section {
       flex-direction: column;
       justify-content: space-between;
     }
-    .tile {
-        width: 100%;
-        flex-direction: column;
 
-    }
-    .tile {
-        height: 30vh;
-    }
     #go-to-projects-arrow {
         position: static;
         margin: 10px auto;
