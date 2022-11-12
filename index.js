@@ -40,15 +40,15 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 })
 
-const mouse = {
-    x: -10,
-    y: -10,
-}
+// const mouse = {
+//     x: -10,
+//     y: -10,
+// }
 
-canvas.addEventListener('mousemove', (e) => {
-    mouse.x = e.x
-    mouse.y = e.y
-})
+// canvas.addEventListener('mousemove', (e) => {
+//     mouse.x = e.x
+//     mouse.y = e.y
+// })
 
 
 class Particle {
