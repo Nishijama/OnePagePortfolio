@@ -40,16 +40,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 })
 
-// const mouse = {
-//     x: -10,
-//     y: -10,
-// }
-
-// canvas.addEventListener('mousemove', (e) => {
-//     mouse.x = e.x
-//     mouse.y = e.y
-// })
-
 
 class Particle {
     constructor() {
@@ -153,3 +143,6 @@ function toggleHeader() {
     document.querySelector("#avatar").classList.toggle("hidden")
     document.querySelector("#header-text").classList.toggle("hidden")
 }
+
+
+let hide = document.getElementById('hide').style.display = "none"
